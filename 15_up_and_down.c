@@ -2,31 +2,36 @@
 #include <stdlib.h>
 #include <time.h>
 
+// in C, True = 1, False = 0
+
 int main() {
 	// Guess a number between 0 ~ 100
 	srand(time(NULL));
 
 	int	r_num = rand() % 100 + 1;
 	//printf("%d\n", r_num);
-
 	int guess;
-	
-	while (guess != r_num) {
+	int chances = 5;
+
+	while (chances>0) {
+		printf("*** Remaining attempt : %d ***\n", chances);
+		chances -= 1;
 		printf("Guess the number : ");
 		scanf("%d", &guess);
-		
+
 		if (guess > r_num) {
-			printf("Lower than %d\n", guess); 
+			printf("Lower than %d\n\n", guess); 
 		}
 		else if (guess < r_num) {
-			printf("Higher than %d\n", guess);
+			printf("Higher than %d\n\n", guess);
 		}
-		else {
-			printf("Enter a number between 1 - 100\n");
+		else if (guess == r_num) {
+			printf("You got it!\n");
+			break;
 		}
 	}
 
-	printf("You got it!\n");
+	printf("Game Over\n");
 
 	return 0;
 }

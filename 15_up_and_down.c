@@ -12,6 +12,8 @@ int main() {
 	//printf("%d\n", r_num);
 	int guess;
 	int chances = 5;
+	
+	printf("%d\n", r_num);
 
 	while (chances>0) {
 		printf("*** Remaining attempt : %d ***\n", chances);
@@ -30,8 +32,7 @@ int main() {
 			break;
 		}
 	}
-
-	printf("Game Over\n");
+	printf("Game Over!\n");
 
 	return 0;
 }

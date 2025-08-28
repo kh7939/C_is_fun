@@ -5,7 +5,7 @@
 int main() {
 	srand(time(NULL));
 
-	int i=rand() & 3;
+	int i = rand() & 3;
 	
 	switch (i) {
 		case 0:

@@ -34,6 +34,7 @@ int main() {
 	int num1 = rand();
 	int num2 = rand();
 	printf("result : %d\n" ,with_para_return(num1, num2));
+
 	printf("random max : %d\n", RAND_MAX);
 	return 0;
 }
@@ -51,6 +52,6 @@ void with_para(int num1, int num2, int num3) {
 	printf("%d, %d, %d\n", num1, num2, num3);
 }
 
-int with_para_return(int max, int min) {
-	return max-min;
+int with_para_return(int n1, int n2) {
+	return n1-n2;
 }

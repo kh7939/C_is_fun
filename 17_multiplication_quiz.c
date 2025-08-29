@@ -18,10 +18,11 @@ int main() {
 		showQuestion(i, num1, num2);
 
 		int answer;
+		printf("	Your answer : ");
 		scanf("%d", &answer);
 	
 		if (answer == -1) {
-			printf("You quit the quizz\n");
+			printf("\nYou quit the quizz\n");
 			break;
 		}
 		else if (answer == num1 * num2) {
@@ -29,11 +30,13 @@ int main() {
 			count += 1;
 		}
 		else {
-			printf("\nWrong\n\n");
+			printf("\n	=== Wrong ===\n\n");
 		}
 	}	
-	printf("You've answered %d out of 5 right\n", count);
-
+	printf("=====================================\n");
+	printf("You've answered %d out of 5 correctly\n", count);
+	printf("=====================================\n");
+	
 	return 0;
 }
 
@@ -42,11 +45,13 @@ int getRandomNumber(int i) {
 }
 
 void showQuestion(int i, int num1, int num2) {
-	printf("    Question # %d\n", i);
-	printf("### What is %d * %d ###\n", num1, num2);
+	printf("\n---------------------------------\n");
+	printf("	Question # %d\n", i);
+	printf("---------------------------------\n");
+	printf("What is %d * %d ?     ", num1, num2);
 	printf("(To quit, type -1)\n");
 }
 
 void success() {
-	printf("\nYou got it!\n\n");
+	printf("\n	!!! You got it !!!\n\n");
 }

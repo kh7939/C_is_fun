@@ -30,6 +30,8 @@ int main() {
 	printf("%d\n", with_return());
 
 	with_para(1, 3, 5);
+	
+	with_para_return();
 
 	int num1 = rand();
 	int num2 = rand();
@@ -53,5 +55,6 @@ void with_para(int num1, int num2, int num3) {
 }
 
 int with_para_return(int n1, int n2) {
+	printf("return : \n");
 	return n1-n2;
 }

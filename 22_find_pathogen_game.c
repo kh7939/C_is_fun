@@ -13,7 +13,7 @@ int main() {
 	
 	srand(time(NULL));
 	
-	int pathogen = rand() % 4; // pick one pathogen out of 4 mutations, 0, 1, 2, 3
+	int pathogen = rand() % 5; // pick one pathogen out of 5 mutations, 0, 1, 2, 3, 4
 	
 	int preCntMuts = 0;
 	
@@ -53,7 +53,7 @@ int main() {
 		
 		for (int show = 0; show < 5; show++)
 		{
-			if (mutations[show] == 1) printf(" %d", show);
+			if (mutations[show] == 1) printf(" %d", show + 1);
 		}
 		
 		//let users know if the pathogen is detected or not
@@ -72,7 +72,7 @@ int main() {
 	printf("Which mutation is the pathogen?\n");
 	scanf("%d", &answer);
 
-	if (answer == pathogen) printf("\n!!! You Got It !!!\n");
+	if (answer == pathogen + 1) printf("\n!!! You Got It !!!\n");
 	else printf("\n!!! Wrong !!!\n");
 
 	return 0;

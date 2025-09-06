@@ -6,6 +6,8 @@ int main() {
 	
 	// * is called pointer, pointer is 8 bytes (int is 4 bytes)
 	// data equals *(&data) -> & : to get a memory address where data is stored, * : to read the value in &data (address) 
+	
+	%p : show an address in hexadecimal
 
 	printf("data pointer(%p) , (%d)\n", &data, data);
 	printf("data (%d) , (%d)\n", data, *(&data));
